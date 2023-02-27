@@ -15,7 +15,7 @@ def show_homepage():
     # Write a title and description of your app
     st.title(':red[Hello Everyone] :wave:')
         
-    st.header( 'I am :green[Vamsi Tallapudi] and :blue[Welcome to my first web aplication]' )
+    st.header( 'I am :green[Vamsi Tallapudi] and :blue[Welcome to my first web application]' )
         
        
     
