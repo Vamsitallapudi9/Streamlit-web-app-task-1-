@@ -47,8 +47,8 @@ st.markdown("[![GitHub](https://img.shields.io/badge/-GitHub-black?style=for-the
 st.write("Feel free to browse my projects and repositories. If you find something interesting, don't hesitate to reach out and let me know!")
 
 # Add a colorful thank you message
-body = ":rainbow: Let me take a moment to thank :heart_eyes_cat: Kanav Bansal and :sparkles: Innomatics Research Labs :sparkles: for this amazing opportunity! :rocket:"
-st.write(body)
+body = ":rainbow: Let me take a moment to thank :heart_eyes_cat: **Kanav Bansal** and :sparkles: **Innomatics Research Labs** :sparkles: for this amazing opportunity! :rocket:"
+st.markdown(body, unsafe_allow_html=True)
 
 # Add a link to Innomatics Research Labs
 st.markdown(":star2: DO CHECK OUT Innomatics Research Labs TO LEARN AND GROW :star2:")
