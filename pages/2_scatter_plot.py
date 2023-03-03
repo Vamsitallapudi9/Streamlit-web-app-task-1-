@@ -14,13 +14,12 @@ st.write(titanic_df)
 
 
 
-
-
-# Scatter plot example
 st.title("Titanic Dataset - Scatter Plot")
 x_var = st.selectbox("Select x-axis variable", options=list(titanic_df.columns))
 y_var = st.selectbox("Select y-axis variable", options=list(titanic_df.columns))
 hue_var = st.selectbox("Select hue variable", options=list(titanic_df.columns))
-fig, ax = plt.subplots()
-sns.scatterplot(data=titanic_df, x=x_var, y=y_var, hue=hue_var)
-st.pyplot(fig)
+
+fig = px.scatter(titanic_df, x=x_var, y=y_var, color=hue_var)
+fig.update_layout(title="Scatter Plot of Titanic Dataset")
+
+st.plotly_chart(fig)

@@ -10,6 +10,7 @@ titanic_df = sns.load_dataset('titanic')
 
 # Display dataframe
 st.title("Titanic Dataset")
+st.title("Titanic Dataset")
 st.write(titanic_df)
 
 
@@ -19,6 +20,8 @@ st.title("Titanic Dataset - Bar Plot")
 x_var = st.selectbox("Select x-axis variable", options=list(titanic_df.columns))
 y_var = st.selectbox("Select y-axis variable", options=list(titanic_df.columns))
 hue_var = st.selectbox("Select hue variable", options=list(titanic_df.columns))
-fig, ax = plt.subplots()
-sns.barplot(data=titanic_df, x=x_var, y=y_var, hue=hue_var)
-st.pyplot(fig)
+
+fig = px.bar(titanic_df, x=x_var, y=y_var, color=hue_var)
+fig.update_layout(title="Bar Plot of Titanic Dataset")
+
+st.plotly_chart(fig)

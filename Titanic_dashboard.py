@@ -6,7 +6,7 @@ from sklearn import preprocessing
 import plotly.express as px
 
 # Set page title and icon
-st.set_page_config(page_title="Welcome to My App", page_icon=":smiley:",layout="wide")
+st.set_page_config(page_title="Hey fellas, Check this out!!!", page_icon=":smiley:",layout="wide")
 
 
 

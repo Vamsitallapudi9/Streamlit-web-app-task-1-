@@ -17,6 +17,8 @@ st.write(titanic_df)
 st.title("Titanic Dataset - Count Plot")
 x_var = st.selectbox("Select x-axis variable", options=list(titanic_df.columns))
 hue_var = st.selectbox("Select hue variable", options=list(titanic_df.columns))
-fig, ax = plt.subplots()
-sns.countplot(data=titanic_df, x=x_var, hue=hue_var)
-st.pyplot(fig)
+
+fig = px.histogram(titanic_df, x=x_var, color=hue_var)
+fig.update_layout(title="Count Plot of Titanic Dataset")
+
+st.plotly_chart(fig)
